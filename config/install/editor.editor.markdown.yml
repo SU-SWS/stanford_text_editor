@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.markdown
+  module:
+    - simplemde
+format: markdown
+editor: simplemde
+settings:
+  spell_checker: 1
+  prompt_urls: 0
+  show_icons:
+    - heading-1
+    - heading-2
+    - heading-3
+    - code
+    - quote
+    - unordered-list
+    - ordered-list
+    - clean-block
+    - link
+    - table
+    - horizontal-rule
+    - side-by-side
+    - fullscreen
+image_upload: {  }

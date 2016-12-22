@@ -1,0 +1,15 @@
+name: 'Stanford Text Editor'
+description: 'Input formats and WYSIWYG settings'
+type: module
+core: 8.x
+dependencies:
+  - ckeditor
+  - editor
+  - editor_file
+  - filter
+  - linkit
+  - markdown
+  - pathologic
+  - simplemde
+  - token_filter
+version: 8.x-1.0-dev

@@ -1,0 +1,6 @@
+Stanford Text Editor
+
+Version 8.x-1.0                                                       YYYY-MM-DD
+--------------------------------------------------------------------------------
+
+- Initial Release

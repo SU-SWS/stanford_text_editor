@@ -1,0 +1,10 @@
+{
+    "name": "su-sws/stanford_text_editor",
+    "description": "Input format and WYSIWYG settings for Drupal.",
+    "type": "stanford-module",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "require": {
+        "composer/installers": "^1.2"
+    }
+}
