@@ -19,6 +19,11 @@ settings:
     rows:
       -
         -
+          name: style
+          items:
+            - Styles
+            - Format
+        -
           name: Formatting
           items:
             - Bold
@@ -45,12 +50,6 @@ settings:
             - DrupalFile
             - DrupalImage
             - Table
-            - HorizontalRule
-        -
-          name: style
-          items:
-            - Styles
-            - Format
         -
           name: Tools
           items:
@@ -58,6 +57,7 @@ settings:
             - Redo
             - ShowBlocks
             - Source
+            - PasteFromWord
         -
           name: Align
           items:
