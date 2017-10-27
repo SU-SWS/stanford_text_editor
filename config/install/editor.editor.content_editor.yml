@@ -72,7 +72,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "p.summary-text|Summary Text\r\np.lead-text|Lead Text\r\np.pullquote-large|Pullquote Large"
+      styles: "p.lead-text|Lead Text\r\np.pullquote-large|Pullquote Large"
 image_upload:
   status: true
   scheme: public
