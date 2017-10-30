@@ -12,4 +12,5 @@ dependencies:
   - pathologic
   - simplemde
   - token_filter
-version: 8.x-1.0-dev
+version: 8.x-1.0-alpha1
+package: Stanford
