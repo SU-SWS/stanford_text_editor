@@ -21,6 +21,7 @@
         "drupal/markdown": "~1.2",
         "drupal/pathologic": "~1.0@alpha",
         "drupal/simplemde": "~1.0@alpha",
-        "drupal/token_filter": "~1.1"
+        "drupal/token_filter": "~1.1",
+        "sparksuite/simplemde-markdown-editor": "~1.11"
     }
 }
