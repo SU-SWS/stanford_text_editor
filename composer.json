@@ -4,6 +4,16 @@
     "type": "drupal-custom-module",
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
+    "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "1": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    },
     "require": {
         "composer/installers": "^1.2"
     }
