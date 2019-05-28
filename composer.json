@@ -12,6 +12,10 @@
         "1": {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        "2": {
+          "type": "github",
+          "url": "https://github.com/sparksuite/simplemde-markdown-editor"
         }
     },
     "require": {
