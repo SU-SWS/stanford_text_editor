@@ -15,6 +15,12 @@
         }
     },
     "require": {
-        "composer/installers": "^1.2"
+        "composer/installers": "^1.2",
+        "drupal/editor_file": "~1.4",
+        "drupal/linkit": "~4.3",
+        "drupal/markdown": "~1.2",
+        "drupal/pathologic": "~1.0@alpha",
+        "drupal/simplemde": "~1.0@alpha",
+        "drupal/token_filter": "~1.1"
     }
 }
