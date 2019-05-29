@@ -28,8 +28,10 @@
     },
     "require": {
         "composer/installers": "^1.2",
+        "drupal/anchor_link": "~2.0@alpha",
         "drupal/editor_file": "~1.4",
         "drupal/editor_advanced_link": "~1.4",
+        "drupal/embed": "~1.0",
         "drupal/linkit": "~5.0@beta",
         "drupal/markdown": "~1.2",
         "drupal/pathologic": "~1.0@alpha",
