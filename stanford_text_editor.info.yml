@@ -5,12 +5,8 @@ core: 8.x
 dependencies:
   - ckeditor
   - editor
-  - editor_file
+  - entity_embed
   - filter
   - linkit
-  - markdown
-  - pathologic
-  - simplemde
-  - token_filter
 version: 8.x-1.0-dev
 package: Stanford

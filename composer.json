@@ -4,39 +4,46 @@
     "type": "drupal-custom-module",
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
-    "repositories": {
-        "0": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "1": {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        "2": {
+    "repositories": [
+        {
             "type": "package",
-                "package": {
-                "name": "sparksuite/simplemde-markdown-editor",
-                "version": "1.11.2",
-                "source": {
-                    "url": "https://github.com/sparksuite/simplemde-markdown-editor",
-                    "type": "git",
-                    "reference": "master"
+            "package": {
+                "name": "ckeditor-plugin/link",
+                "version": "4.10.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.10.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/fakeobjects",
+                "version": "4.10.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.10.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
                 }
             }
         }
-    },
+    ],
     "require": {
+        "ckeditor-plugin/fakeobjects": "4.10.1",
+        "ckeditor-plugin/link": "4.10.1",
         "composer/installers": "^1.2",
-        "drupal/anchor_link": "~2.0@alpha",
-        "drupal/editor_file": "~1.4",
-        "drupal/editor_advanced_link": "~1.4",
+        "drupal/anchor_link": "~2.0-alpha2",
+        "drupal/editor_advanced_link": "^1.4",
         "drupal/embed": "~1.0",
         "drupal/linkit": "~5.0@beta",
-        "drupal/markdown": "~1.2",
-        "drupal/pathologic": "~1.0@alpha",
-        "drupal/simplemde": "~1.0@alpha",
-        "drupal/token_filter": "~1.1",
-        "sparksuite/simplemde-markdown-editor": "~1.11"
+        "su-sws/stanford_media": "dev-8.x-1.x"
     }
 }
