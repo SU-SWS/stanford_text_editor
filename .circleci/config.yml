@@ -16,31 +16,9 @@ defaults: &defaults
 prep_tests: &prep_tests
   <<: *defaults
   steps:
-    - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "composer.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-    - run:
-        name: Directory Setup
-        command: cd /var/www && rm -rf html && composer create-project drupal-composer/drupal-project:8.x-dev html --no-interaction
-    - run:
-        command: |
-          ln -s web docroot
-          echo "composer config repositories.module vcs $CIRCLE_REPOSITORY_URL"
-          composer config repositories.module vcs $CIRCLE_REPOSITORY_URL
-          composer require $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME:dev-$CIRCLE_BRANCH
     - checkout:
-        path: /var/www/html/docroot/modules/custom
-    - run:
-        name: Install
-        command: |
-          cp /var/www/html/docroot/modules/custom/$CIRCLE_PR_REPONAME/.circleci/phpunit.xml /var/www/html/docroot/core/
-          cd docroot && ../vendor/bin/phpunit -c core modules/custom
-    - save_cache:
-        paths:
-          - .
-        key: v1-dependencies-{{ checksum "composer.lock" }}
+        path: /var/www/test
+    - run: /var/www/test/.circleci/build.sh
 
 # Declare all of the jobs we should run.
 jobs:
