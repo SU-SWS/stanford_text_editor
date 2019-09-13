@@ -35,7 +35,9 @@ class StanfordTextEditorTest extends KernelTestBase {
    */
   public function testEditors() {
     /** @var \Drupal\editor\Entity\Editor[] $editors */
-    $editors = \Drupal::entityTypeManager()->getStorage('editor')->loadMultiple();
+    $editors = \Drupal::entityTypeManager()
+      ->getStorage('editor')
+      ->loadMultiple();
     $this->assertCount(2, $editors);
     $this->assertArrayHasKey('stanford_html', $editors);
     $this->assertArrayHasKey('stanford_minimal_html', $editors);
@@ -45,15 +47,31 @@ class StanfordTextEditorTest extends KernelTestBase {
     $this->assertCount(5, $settings['toolbar']['rows'][0]);
 
     $this->assertArrayHasKey('drupallink', $settings['plugins']);
-    $this->assertArraySubset(['linkit_enabled' => TRUE, 'linkit_profile' => 'default'], $settings['plugins']['drupallink']);
-    $this->assertArraySubset(['styles' => "a.su-button|Button\r\na.su-button--big|Big Button\r\na.su-button--secondary|Secondary Button"], $settings['plugins']['stylescombo']);
-
+    $this->assertArraySubset([
+      'linkit_enabled' => TRUE,
+      'linkit_profile' => 'default',
+    ], $settings['plugins']['drupallink']);
+    $styles = [
+      'a.su-button|Button',
+      'a.su-button--big|Big Button',
+      'a.su-button--secondary|Secondary Button',
+      'p.su-intro-text|Intro Text',
+      'p.su-font-splash|Splash Font',
+      'p.su-quote-text|Quote Text',
+      'p.su-drop-cap|Drop Cap First Letter',
+      'p.su-related-text|Related Text',
+      'p.callout-text|Callout Text',
+    ];
+    $this->assertArraySubset(['styles' => implode("\r\n", $styles)], $settings['plugins']['stylescombo']);
     $settings = $editors['stanford_minimal_html']->getSettings();
     $this->assertCount(1, $settings['toolbar']['rows']);
     $this->assertCount(3, $settings['toolbar']['rows'][0]);
 
     $this->assertArrayHasKey('drupallink', $settings['plugins']);
-    $this->assertArraySubset(['linkit_enabled' => TRUE, 'linkit_profile' => 'default'], $settings['plugins']['drupallink']);
+    $this->assertArraySubset([
+      'linkit_enabled' => TRUE,
+      'linkit_profile' => 'default',
+    ], $settings['plugins']['drupallink']);
     $this->assertArraySubset(['styles' => "a.su-button|Button\r\na.su-button--big|Big Button\r\na.su-button--secondary|Secondary Button"], $settings['plugins']['stylescombo']);
 
   }
@@ -66,7 +84,9 @@ class StanfordTextEditorTest extends KernelTestBase {
    */
   public function testFilterFormats() {
     /** @var \Drupal\filter\Entity\FilterFormat[] $filters */
-    $filters = \Drupal::entityTypeManager()->getStorage('filter_format')->loadMultiple();
+    $filters = \Drupal::entityTypeManager()
+      ->getStorage('filter_format')
+      ->loadMultiple();
     $this->assertCount(2, $filters);
 
     $this->assertCount(11, $filters['stanford_html']->get('filters'));
@@ -84,7 +104,8 @@ class StanfordTextEditorTest extends KernelTestBase {
       'linkit',
     ];
     foreach ($html_filters as $filter_id) {
-      $this->assertNotNull($filters['stanford_html']->filters()->get($filter_id));
+      $this->assertNotNull($filters['stanford_html']->filters()
+        ->get($filter_id));
     }
 
     $this->assertCount(3, $filters['stanford_minimal_html']->get('filters'));
@@ -95,7 +116,8 @@ class StanfordTextEditorTest extends KernelTestBase {
       'linkit',
     ];
     foreach ($html_filters as $filter_id) {
-      $this->assertNotNull($filters['stanford_html']->filters()->get($filter_id));
+      $this->assertNotNull($filters['stanford_html']->filters()
+        ->get($filter_id));
     }
   }
 
