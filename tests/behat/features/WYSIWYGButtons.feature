@@ -17,6 +17,9 @@ Feature: WYSIWYG Buttons
     And I select "HTML" from "Text format"
     And I wait 1 seconds
     And I click the "a[title='Link (Ctrl+L)']" element
-    Then I fill in "URL" with "test"
+    And I wait 1 seconds
+    Then I fill in element "input.form-linkit-autocomplete" with "test"
+    And I click the "input.form-linkit-autocomplete" element
     And I wait for AJAX to finish
-    Then I should see "Test Autocomplete"
+    And I wait 1 seconds
+    Then I should see "Test autocomplete"
