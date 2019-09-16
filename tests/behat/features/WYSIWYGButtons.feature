@@ -2,7 +2,7 @@
 Feature: WYSIWYG Buttons
   In order to verify that wysiwyg works
   As a user
-  I should see specific buttons
+  I should see specific buttons.
 
   @javascript
   Scenario: Test linkit support.
