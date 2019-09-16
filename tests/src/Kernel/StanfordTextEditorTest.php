@@ -120,7 +120,7 @@ class StanfordTextEditorTest extends KernelTestBase {
       $this->assertNotNull($filters['stanford_html']->filters()
         ->get($filter_id));
     }
-                       echo "BAD"!
+                       echo "BAD";
   }
 
 }
