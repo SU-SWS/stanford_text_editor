@@ -45,5 +45,12 @@
         "drupal/embed": "~1.0",
         "drupal/linkit": "~5.0@beta",
         "su-sws/stanford_media": "dev-8.x-1.x"
+    },
+    "extra": {
+        "patches": {
+            "drupal/anchor_link": {
+                "https://www.drupal.org/project/anchor_link/issues/2958532": "https://www.drupal.org/files/issues/2019-01-11/anchor_link-linkit-support_2958532.patch"
+            }
+        }
     }
 }

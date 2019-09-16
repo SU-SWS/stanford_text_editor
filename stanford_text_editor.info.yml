@@ -3,10 +3,12 @@ description: 'Input formats and WYSIWYG settings'
 type: module
 core: 8.x
 dependencies:
-  - ckeditor
-  - editor
-  - entity_embed
-  - filter
-  - linkit
+  - anchor_link:anchor_link
+  - drupal:ckeditor
+  - drupal:editor
+  - drupal:filter
+  - entity_embed:entity_embed
+  - linkit:linkit
+  - stanford_media:stanford_media
 version: 8.x-1.0-dev
 package: Stanford
