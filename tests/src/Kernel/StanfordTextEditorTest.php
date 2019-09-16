@@ -34,6 +34,7 @@ class StanfordTextEditorTest extends KernelTestBase {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
   public function testEditors() {
+    $this->assertFalse(TRUE);
     /** @var \Drupal\editor\Entity\Editor[] $editors */
     $editors = \Drupal::entityTypeManager()
       ->getStorage('editor')
