@@ -7,7 +7,6 @@ dependencies:
   - drupal:ckeditor
   - drupal:editor
   - drupal:filter
-  - entity_embed:entity_embed
   - linkit:linkit
   - stanford_media:stanford_media
 version: 8.x-1.0-dev
