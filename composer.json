@@ -41,6 +41,7 @@
         "ckeditor-plugin/link": "4.10.1",
         "composer/installers": "^1.2",
         "drupal/anchor_link": "~2.0-alpha2",
+        "drupal/core": "^8.8",
         "drupal/editor_advanced_link": "^1.4",
         "drupal/embed": "~1.0",
         "drupal/linkit": "~5.0@beta",
