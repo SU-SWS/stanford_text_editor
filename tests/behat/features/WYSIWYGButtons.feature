@@ -27,7 +27,7 @@ Feature: WYSIWYG Buttons
     Then I should see 1 "a.cke_button[title='Increase Indent']" elements
     Then I should see 1 "a.cke_button[title='Table']" elements
     Then I should see 1 "a.cke_button[title='Block Quote']" elements
-    Then I should see 1 "a.cke_button[title='Embed Media']" elements
+    Then I should see 1 "a.cke_button[title='Insert from Media Library']" elements
     Then I should see 1 "a.cke_button[title='Superscript']" elements
     Then I should see 1 "a.cke_button[title='Subscript']" elements
     Then I should see 1 "a.cke_button[title='Remove Format']" elements

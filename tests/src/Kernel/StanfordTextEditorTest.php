@@ -12,11 +12,13 @@ class StanfordTextEditorTest extends KernelTestBase {
   protected static $modules = [
     'ckeditor',
     'editor',
-    'entity_embed',
     'filter',
     'linkit',
     'stanford_text_editor',
     'system',
+    'media',
+    'media_library',
+    'views',
   ];
 
   /**
@@ -92,7 +94,7 @@ class StanfordTextEditorTest extends KernelTestBase {
     $this->assertCount(11, $filters['stanford_html']->get('filters'));
     $html_filters = [
       'editor_file_reference',
-      'entity_embed',
+      'media_embed',
       'filter_align',
       'filter_autop',
       'filter_caption',
