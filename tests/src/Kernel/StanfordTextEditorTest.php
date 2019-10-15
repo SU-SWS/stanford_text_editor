@@ -49,10 +49,11 @@ class StanfordTextEditorTest extends KernelTestBase {
     $this->assertCount(5, $settings['toolbar']['rows'][0]);
 
     $this->assertArrayHasKey('drupallink', $settings['plugins']);
-    $this->assertArraySubset([
-      'linkit_enabled' => TRUE,
-      'linkit_profile' => 'default',
-    ], $settings['plugins']['drupallink']);
+    $this->assertArrayHasKey('linkit_enabled', $settings['plugins']['drupallink']);
+    $this->assertArrayHasKey('linkit_profile', $settings['plugins']['drupallink']);
+    $this->assertTrue($settings['plugins']['drupallink']['linkit_enabled']);
+    $this->assertEquals('default', $settings['plugins']['drupallink']['linkit_profile']);
+
     $styles = [
       'a.su-button|Button',
       'a.su-button--big|Big Button',
@@ -64,17 +65,18 @@ class StanfordTextEditorTest extends KernelTestBase {
       'p.su-related-text|Related Text',
       'p.su-callout-text|Callout Text',
     ];
-    $this->assertArraySubset(['styles' => implode("\r\n", $styles)], $settings['plugins']['stylescombo']);
+    $this->assertEquals(implode("\r\n", $styles), $settings['plugins']['stylescombo']['styles']);
     $settings = $editors['stanford_minimal_html']->getSettings();
     $this->assertCount(1, $settings['toolbar']['rows']);
     $this->assertCount(3, $settings['toolbar']['rows'][0]);
 
     $this->assertArrayHasKey('drupallink', $settings['plugins']);
-    $this->assertArraySubset([
-      'linkit_enabled' => TRUE,
-      'linkit_profile' => 'default',
-    ], $settings['plugins']['drupallink']);
-    $this->assertArraySubset(['styles' => "a.su-button|Button\r\na.su-button--big|Big Button\r\na.su-button--secondary|Secondary Button"], $settings['plugins']['stylescombo']);
+    $this->assertArrayHasKey('linkit_enabled', $settings['plugins']['drupallink']);
+    $this->assertArrayHasKey('linkit_profile', $settings['plugins']['drupallink']);
+    $this->assertTrue($settings['plugins']['drupallink']['linkit_enabled']);
+    $this->assertEquals('default', $settings['plugins']['drupallink']['linkit_profile']);
+
+    $this->assertEquals("a.su-button|Button\r\na.su-button--big|Big Button\r\na.su-button--secondary|Secondary Button", $settings['plugins']['stylescombo']['styles']);
 
   }
 
