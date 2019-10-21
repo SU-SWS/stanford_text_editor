@@ -55,12 +55,14 @@ class StanfordTextEditorTest extends KernelTestBase {
       'a.su-button|Button',
       'a.su-button--big|Big Button',
       'a.su-button--secondary|Secondary Button',
+      'a.su-link--action|Action Link',
       'p.su-intro-text|Intro Text',
       'p.su-font-splash|Splash Font',
       'p.su-quote-text|Quote Text',
       'p.su-drop-cap|Drop Cap First Letter',
       'p.su-related-text|Related Text',
       'p.su-callout-text|Callout Text',
+      'p.su-subheading|Sub Title',
     ];
     $this->assertArraySubset(['styles' => implode("\r\n", $styles)], $settings['plugins']['stylescombo']);
     $settings = $editors['stanford_minimal_html']->getSettings();
