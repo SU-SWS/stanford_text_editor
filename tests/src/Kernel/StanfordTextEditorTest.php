@@ -12,11 +12,13 @@ class StanfordTextEditorTest extends KernelTestBase {
   protected static $modules = [
     'ckeditor',
     'editor',
-    'entity_embed',
     'filter',
     'linkit',
     'stanford_text_editor',
     'system',
+    'media',
+    'media_library',
+    'views',
   ];
 
   /**
@@ -47,10 +49,11 @@ class StanfordTextEditorTest extends KernelTestBase {
     $this->assertCount(5, $settings['toolbar']['rows'][0]);
 
     $this->assertArrayHasKey('drupallink', $settings['plugins']);
-    $this->assertArraySubset([
-      'linkit_enabled' => TRUE,
-      'linkit_profile' => 'default',
-    ], $settings['plugins']['drupallink']);
+    $this->assertArrayHasKey('linkit_enabled', $settings['plugins']['drupallink']);
+    $this->assertArrayHasKey('linkit_profile', $settings['plugins']['drupallink']);
+    $this->assertTrue($settings['plugins']['drupallink']['linkit_enabled']);
+    $this->assertEquals('default', $settings['plugins']['drupallink']['linkit_profile']);
+
     $styles = [
       'a.su-button|Button',
       'a.su-button--big|Big Button',
@@ -64,17 +67,18 @@ class StanfordTextEditorTest extends KernelTestBase {
       'p.su-callout-text|Callout Text',
       'p.su-subheading|Sub Title',
     ];
-    $this->assertArraySubset(['styles' => implode("\r\n", $styles)], $settings['plugins']['stylescombo']);
+    $this->assertEquals(implode("\r\n", $styles), $settings['plugins']['stylescombo']['styles']);
     $settings = $editors['stanford_minimal_html']->getSettings();
     $this->assertCount(1, $settings['toolbar']['rows']);
     $this->assertCount(3, $settings['toolbar']['rows'][0]);
 
     $this->assertArrayHasKey('drupallink', $settings['plugins']);
-    $this->assertArraySubset([
-      'linkit_enabled' => TRUE,
-      'linkit_profile' => 'default',
-    ], $settings['plugins']['drupallink']);
-    $this->assertArraySubset(['styles' => "a.su-button|Button\r\na.su-button--big|Big Button\r\na.su-button--secondary|Secondary Button"], $settings['plugins']['stylescombo']);
+    $this->assertArrayHasKey('linkit_enabled', $settings['plugins']['drupallink']);
+    $this->assertArrayHasKey('linkit_profile', $settings['plugins']['drupallink']);
+    $this->assertTrue($settings['plugins']['drupallink']['linkit_enabled']);
+    $this->assertEquals('default', $settings['plugins']['drupallink']['linkit_profile']);
+
+    $this->assertEquals("a.su-button|Button\r\na.su-button--big|Big Button\r\na.su-button--secondary|Secondary Button\r\na.su-link--action|Action Link", $settings['plugins']['stylescombo']['styles']);
 
   }
 
@@ -94,7 +98,7 @@ class StanfordTextEditorTest extends KernelTestBase {
     $this->assertCount(11, $filters['stanford_html']->get('filters'));
     $html_filters = [
       'editor_file_reference',
-      'entity_embed',
+      'media_embed',
       'filter_align',
       'filter_autop',
       'filter_caption',

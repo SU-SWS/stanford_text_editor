@@ -42,7 +42,7 @@ settings:
           name: Media
           items:
             - Blockquote
-            - media_browser
+            - DrupalMediaLibrary
         -
           name: Tools
           items:
