@@ -78,7 +78,7 @@ class StanfordTextEditorTest extends KernelTestBase {
     $this->assertTrue($settings['plugins']['drupallink']['linkit_enabled']);
     $this->assertEquals('default', $settings['plugins']['drupallink']['linkit_profile']);
 
-    $this->assertEquals("a.su-button|Button\r\na.su-button--big|Big Button\r\na.su-button--secondary|Secondary Button", $settings['plugins']['stylescombo']['styles']);
+    $this->assertEquals("a.su-button|Button\r\na.su-button--big|Big Button\r\na.su-button--secondary|Secondary Button\r\na.su-link--action|Action Link", $settings['plugins']['stylescombo']['styles']);
 
   }
 
