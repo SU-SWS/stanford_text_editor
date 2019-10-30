@@ -1,5 +1,18 @@
 Stanford Text Editor
 
+Version 8.x-1.0                                                       2019-10-30
+--------------------------------------------------------------------------------
+- Added circleci config
+- Added tests
+- Integrated with Stanford Media
+- Removed full_html editor
+- Removed markdown editor
+- Removed a number of filter formats.
+- Removed features file.
+- Updated available buttons
+- Updated available styles
+- Pretty much a whole new version over alpha1, sorry early adopters.
+
 Version 8.x-1.0-alpha1                                                2017-10-30
 --------------------------------------------------------------------------------
 
