@@ -1,5 +1,5 @@
 # [Stanford Text Editor](https://github.com/SU-SWS/stanford_text_editor)
-##### Version: 8.x-1.0
+##### Version: 8.x-1.1
 
 [![CircleCI](https://circleci.com/gh/SU-SWS/stanford_text_editor.svg?style=svg)](https://circleci.com/gh/SU-SWS/stanford_text_editor)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3db3047a28d5bd9058db/maintainability)](https://codeclimate.com/github/SU-SWS/stanford_text_editor/maintainability)
