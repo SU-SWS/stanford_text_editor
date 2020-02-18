@@ -1,5 +1,16 @@
 Stanford Text Editor
 
+Version 8.x-1.2                                                       2020-02-14
+--------------------------------------------------------------------------------
+- Update stanford_html allowed_html list to have css classes on lists. (#15)
+- Add github template files
+
+Version 8.x-1.1                                                       2020-02-05
+--------------------------------------------------------------------------------
+- D8CORE-1013 Allow classes on header elements
+- D8CORE-1153 Removed H6 from format options.
+
+
 Version 8.x-1.0                                                       2019-10-30
 --------------------------------------------------------------------------------
 - Added circleci config
