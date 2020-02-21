@@ -1,5 +1,10 @@
 Stanford Text Editor
 
+Version 8.x-1.3                                                       2020-02-21
+--------------------------------------------------------------------------------
+- Require later version of anchor_link module.
+- Updated ckeditor plugins for anchor link support.
+
 Version 8.x-1.2                                                       2020-02-14
 --------------------------------------------------------------------------------
 - Update stanford_html allowed_html list to have css classes on lists. (#15)
