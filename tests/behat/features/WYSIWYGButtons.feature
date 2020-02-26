@@ -18,8 +18,8 @@ Feature: WYSIWYG Buttons
     Then I should see 1 "a.cke_button[title='Center']" elements
     Then I should see 1 "a.cke_button[title='Align Right']" elements
     Then I should see 1 "a.cke_button[title='Insert Horizontal Line']" elements
-    Then I should see 1 "a.cke_button[title='Link (Ctrl+K)']" elements
-    Then I should see 1 "a.cke_button[title='Unlink']" elements
+    Then I should see 1 "a.cke_button__drupallink" elements
+    Then I should see 1 "a.cke_button__drupalunlink" elements
     Then I should see 1 "a.cke_button[title='Anchor']" elements
     Then I should see 1 "a.cke_button[title='Insert/Remove Bulleted List']" elements
     Then I should see 1 "a.cke_button[title='Insert/Remove Numbered List']" elements
@@ -39,7 +39,7 @@ Feature: WYSIWYG Buttons
     Then I am on "/node/add/page"
     And I select "HTML" from "Text format"
     And I wait 1 seconds
-    And I click the "a[title='Link (Ctrl+K)']" element
+    And I click the "a.cke_button__drupallink" element
     And I wait 1 seconds
     Then I fill in element "input.form-linkit-autocomplete" with "test"
     And I click the "input.form-linkit-autocomplete" element

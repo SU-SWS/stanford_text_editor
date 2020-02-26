@@ -19,6 +19,7 @@ class StanfordTextEditorTest extends KernelTestBase {
     'media',
     'media_library',
     'views',
+    'stanford_media',
   ];
 
   /**
@@ -59,11 +60,12 @@ class StanfordTextEditorTest extends KernelTestBase {
       'a.su-button--big|Big Button',
       'a.su-button--secondary|Secondary Button',
       'a.su-link--action|Action Link',
+      'p.plain-text|Normal',
       'p.su-intro-text|Intro Text',
       'p.su-font-splash|Splash Font',
       'p.su-quote-text|Quote Text',
       'p.su-drop-cap|Drop Cap First Letter',
-      'p.su-related-text|Related Text',
+      'p.su-related-text|Card Text',
       'p.su-callout-text|Callout Text',
       'p.su-subheading|Sub Title',
     ];
@@ -95,7 +97,7 @@ class StanfordTextEditorTest extends KernelTestBase {
       ->loadMultiple();
     $this->assertCount(2, $filters);
 
-    $this->assertCount(11, $filters['stanford_html']->get('filters'));
+    $this->assertCount(12, $filters['stanford_html']->get('filters'));
     $html_filters = [
       'editor_file_reference',
       'media_embed',
@@ -108,6 +110,7 @@ class StanfordTextEditorTest extends KernelTestBase {
       'filter_htmlcorrector',
       'filter_url',
       'linkit',
+      'stanford_media_embed_markup',
     ];
     foreach ($html_filters as $filter_id) {
       $this->assertNotNull($filters['stanford_html']->filters()
