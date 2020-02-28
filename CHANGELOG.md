@@ -1,5 +1,9 @@
 Stanford Text Editor
 
+Version 8.x-1.4                                                       2020-02-27
+--------------------------------------------------------------------------------
+- D8CORE-1409: Enable new filter in full html editor format. (#22)
+
 Version 8.x-1.3                                                       2020-02-21
 --------------------------------------------------------------------------------
 - Require later version of anchor_link module.
