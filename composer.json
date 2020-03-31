@@ -50,7 +50,7 @@
     "extra": {
         "patches": {
             "drupal/anchor_link": {
-                "https://www.drupal.org/project/anchor_link/issues/2958532": "https://www.drupal.org/files/issues/2019-01-11/anchor_link-linkit-support_2958532.patch"
+                "https://www.drupal.org/project/anchor_link/issues/2958532": "https://www.drupal.org/files/issues/2019-01-11/anchor_link-linkit-support_2958532.patch",
                 "https://www.drupal.org/project/anchor_link/issues/2923703": "https://www.drupal.org/files/issues/problem-when-putting-space-on-the-name-of-the-anchor-2923703-1.patch"
             }
         }
