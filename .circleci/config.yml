@@ -18,7 +18,7 @@ code_coverage: &code_coverage
   steps:
     - restore_cache:
         keys:
-          - dependencies-v1
+          - dependencies-
     - checkout:
         path: /var/www/test
     - run:
@@ -27,7 +27,7 @@ code_coverage: &code_coverage
           composer global require SU-SWS/stanford-caravan:dev-8.x-1.x
           ~/.composer/vendor/bin/sws-caravan phpunit /var/www/html --extension-dir=/var/www/test --with-coverage
     - save_cache:
-        key: dependencies-v1-{{ epoch }}
+        key: dependencies-{{ epoch }}
         paths:
           - .
     - store_test_results:
@@ -40,7 +40,7 @@ behat: &behat
   steps:
     - restore_cache:
         keys:
-          - dependencies-v1
+          - dependencies-
     - checkout:
         path: /var/www/test
     - run:
@@ -49,7 +49,7 @@ behat: &behat
           composer global require SU-SWS/stanford-caravan:dev-8.x-1.x
           ~/.composer/vendor/bin/sws-caravan behat /var/www/html --extension-dir=/var/www/test
     - save_cache:
-        key: dependencies-v1-{{ epoch }}
+        key: dependencies-{{ epoch }}
         paths:
           - .
     - store_test_results:
@@ -67,12 +67,7 @@ jobs:
 # Declare a workflow that runs all of our jobs in parallel.
 workflows:
   version: 2
-  tests:
-    jobs:
-      - run-coverage
-      - run-behat
-  # Re-test every sunday in case this code becomes stale.
-  sundays:
+  weekly:
     jobs:
       - run-coverage
       - run-behat
@@ -82,4 +77,8 @@ workflows:
           filters:
             branches:
               only:
-                - 8.x-1.x
+                - 8.x-2.x
+  tests:
+    jobs:
+      - run-coverage
+      - run-behat
