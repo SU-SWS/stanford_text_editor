@@ -8,11 +8,11 @@
         {
             "type": "package",
             "package": {
-                "name": "ckeditor-plugin/a11yhelp",
+                "name": "ckeditor-plugin/a11ychecker",
                 "version": "4.14.0",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://download.ckeditor.com/a11yhelp/releases/a11yhelp_4.14.0.zip",
+                    "url": "https://download.ckeditor.com/a11ychecker/releases/a11ychecker_4.14.0.zip",
                     "type": "zip"
                 },
                 "require": {
