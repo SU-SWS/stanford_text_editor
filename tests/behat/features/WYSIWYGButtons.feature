@@ -33,6 +33,7 @@ Feature: WYSIWYG Buttons
     Then I should see 1 "a.cke_button[title='Remove Format']" elements
     Then I should see 1 "a.cke_button[title='Source']" elements
     Then I should see 1 "a.cke_button[title='Paste from Word']" elements
+    Then I should see 1 "a.cke_button__a11ychecker" elements
 
     And I fill in "Title" with "Test autocomplete"
     And I press "Save"
