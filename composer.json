@@ -67,7 +67,7 @@
         }
     ],
     "require": {
-        "ckeditor-plugin/a11yhelp": "^4.14.0",
+        "ckeditor-plugin/a11ychecker": "^4.14.0",
         "ckeditor-plugin/balloonpanel": "^4.14.0",
         "ckeditor-plugin/fakeobjects": "^4.14.0",
         "ckeditor-plugin/link": "^4.14.0",
