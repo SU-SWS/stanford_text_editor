@@ -10,7 +10,7 @@ Feature: WYSIWYG Buttons
     Then I am on "/node/add/page"
     And I select "HTML" from "Text format"
     And I wait 1 seconds
-    Then I should see 21 "a.cke_button" elements
+    Then I should see 22 "a.cke_button" elements
 
     Then I should see 1 "a.cke_button[title='Bold (Ctrl+B)']" elements
     Then I should see 1 "a.cke_button[title='Italic (Ctrl+I)']" elements
