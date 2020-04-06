@@ -1,5 +1,9 @@
 Stanford Text Editor
 
+Version 8.x-1.5                                                       2020-04-06
+--------------------------------------------------------------------------------
+- Added automated release actions
+
 Version 8.x-1.4                                                       2020-02-27
 --------------------------------------------------------------------------------
 - D8CORE-1409: Enable new filter in full html editor format. (#22)
