@@ -10,7 +10,7 @@ Feature: WYSIWYG Buttons
     Then I am on "/node/add/page"
     And I select "HTML" from "Text format"
     And I wait 1 seconds
-    Then I should see 21 "a.cke_button" elements
+    Then I should see 22 "a.cke_button" elements
 
     Then I should see 1 "a.cke_button[title='Bold (Ctrl+B)']" elements
     Then I should see 1 "a.cke_button[title='Italic (Ctrl+I)']" elements
@@ -33,6 +33,7 @@ Feature: WYSIWYG Buttons
     Then I should see 1 "a.cke_button[title='Remove Format']" elements
     Then I should see 1 "a.cke_button[title='Source']" elements
     Then I should see 1 "a.cke_button[title='Paste from Word']" elements
+    Then I should see 1 "a.cke_button__a11ychecker" elements
 
     And I fill in "Title" with "Test autocomplete"
     And I press "Save"

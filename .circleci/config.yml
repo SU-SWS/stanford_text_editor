@@ -67,12 +67,7 @@ jobs:
 # Declare a workflow that runs all of our jobs in parallel.
 workflows:
   version: 2
-  tests:
-    jobs:
-      - run-coverage
-      - run-behat
-  # Re-test every sunday in case this code becomes stale.
-  sundays:
+  weekly:
     jobs:
       - run-coverage
       - run-behat
@@ -83,3 +78,7 @@ workflows:
             branches:
               only:
                 - 8.x-1.x
+  tests:
+    jobs:
+      - run-coverage
+      - run-behat
