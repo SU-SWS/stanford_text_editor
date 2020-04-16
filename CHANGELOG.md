@@ -1,5 +1,10 @@
 Stanford Text Editor
 
+Version 8.x-1.6                                                       2020-04-16
+--------------------------------------------------------------------------------
+- D8CORE-1792: Add a11y_checker plugin to editor. (#26)
+- Added automations to CircleCI for master branch releases
+
 Version 8.x-1.5                                                       2020-04-06
 --------------------------------------------------------------------------------
 - Added automated release actions
