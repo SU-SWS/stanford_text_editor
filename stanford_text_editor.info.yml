@@ -7,7 +7,9 @@ dependencies:
   - drupal:ckeditor
   - drupal:editor
   - drupal:filter
+  - ckeditor_a11ychecker:ckeditor_a11ychecker
+  - ckeditor_a11ychecker:ckeditor_balloonpanel
   - linkit:linkit
   - stanford_media:stanford_media
-version: 8.x-1.5
+version: 8.x-1.6
 package: Stanford
