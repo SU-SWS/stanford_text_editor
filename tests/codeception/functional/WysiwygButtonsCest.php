@@ -41,7 +41,7 @@ class WysiwygButtonsCest {
     $I->canSeeNumberOfElements("a.cke_button[title='Paste from Word']", 1);
     $I->canSeeNumberOfElements("a.cke_button__a11ychecker", 1);
 
-    $I->fillField('title', 'Test Autocomplete');
+    $I->fillField('Title', 'Test Autocomplete');
     $I->click('Save');
     $I->amOnPage('/node/add/page');
     $I->selectOption('Text format', 'HTML');
