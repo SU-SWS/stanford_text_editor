@@ -2,7 +2,7 @@
     "name": "su-sws/stanford_text_editor",
     "description": "Input format and WYSIWYG settings for Drupal.",
     "type": "drupal-custom-module",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "minimum-stability": "dev",
     "repositories": [
         {
