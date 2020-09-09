@@ -1,5 +1,12 @@
 Stanford Text Editor
 
+8.x-1.8
+--------------------------------------------------------------------------------
+_Release Date: 2020-09-09_
+
+- D8CORE-2499 Updated composer license (#38) (d1ad34f)
+- DEVGUIDE-000 Added html pre tag to allowed html tags. (#37) (5a807e5)
+
 8.x-1.7
 --------------------------------------------------------------------------------
 _Release Date: 2020-07-13_
