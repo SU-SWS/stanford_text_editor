@@ -78,7 +78,7 @@
         "drupal/editor_advanced_link": "^1.4",
         "drupal/embed": "~1.0",
         "drupal/linkit": "~5.0@beta",
-        "su-sws/stanford_media": "^8.2.0"
+        "su-sws/stanford_media": "dev-8.x-2.x"
     },
     "extra": {
         "patches": {
