@@ -1,5 +1,13 @@
 Stanford Text Editor
 
+8.x-1.10
+--------------------------------------------------------------------------------
+_Release Date: 2020-12-04_
+
+- Added ckeditor fixed toolbar plugin (#42) (c7697df)
+- phpunit void return annoation (8eaaa23)
+- Allow installation on D9 (#41) (958d85c)
+
 8.x-1.8
 --------------------------------------------------------------------------------
 _Release Date: 2020-09-09_
