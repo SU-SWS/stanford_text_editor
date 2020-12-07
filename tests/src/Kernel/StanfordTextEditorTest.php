@@ -25,7 +25,7 @@ class StanfordTextEditorTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
     $this->installConfig('stanford_text_editor');
   }
