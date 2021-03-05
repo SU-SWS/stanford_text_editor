@@ -75,10 +75,7 @@
         "drupal/anchor_link": "^2.2",
         "drupal/ckeditor_a11ychecker": "^1.0",
         "drupal/core": "^8.8 || ^9.0",
-        "drupal/editor_advanced_link": "^1.4",
-        "drupal/embed": "~1.0",
-        "drupal/linkit": "~5.0@beta",
-        "su-sws/stanford_media": "^8.2.0"
+        "su-sws/stanford_media": "dev-8.x-2.x"
     },
     "extra": {
         "patches": {
