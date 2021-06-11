@@ -75,7 +75,7 @@
         "drupal/anchor_link": "^2.2",
         "drupal/ckeditor_a11ychecker": "^1.0",
         "drupal/core": "^8.8 || ^9.0",
-        "su-sws/stanford_media": "^8.2"
+        "su-sws/stanford_media": "dev-8.x-2.x"
     },
     "extra": {
         "patches": {
