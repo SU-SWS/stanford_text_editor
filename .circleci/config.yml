@@ -1,6 +1,7 @@
 version: 2
 # CircleCI integration with Drupal 8.
 
+
 ## Defines images and working directory.
 defaults: &defaults
   docker:
