@@ -68,10 +68,10 @@ class Abbreviation extends CKEditorPluginBase implements CKEditorPluginContextua
   public function getButtons() {
     $iconImage = drupal_get_path('module', 'stanford_text_editor') . '/js/plugins/abbr/icons/abbr.png';
     return [
-        'Abbr' => [
-            'label' => t('Insert Abbreviation'),
-            'image' => $iconImage,
-        ]
+      'Abbr' => [
+        'label' => t('Insert Abbreviation'),
+        'image' => $iconImage,
+      ],
     ];
   }
 
