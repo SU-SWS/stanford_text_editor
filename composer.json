@@ -4,7 +4,6 @@
     "type": "drupal-custom-module",
     "license": "GPL-2.0-or-later",
     "minimum-stability": "dev",
-    "prefer-stable": true,
     "repositories": [
         {
             "type": "package",
@@ -76,7 +75,7 @@
         "drupal/anchor_link": "^2.2",
         "drupal/ckeditor_a11ychecker": "^1.0",
         "drupal/core": "^8.8 || ^9.0",
-        "su-sws/stanford_media": "^8.3"
+        "su-sws/stanford_media": "8.x-dev"
     },
     "extra": {
         "patches": {
